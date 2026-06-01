@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Year 10 Satire — Complete Exam Cheat Sheet</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1410;
+    --paper: #faf7f2;
+    --cream: #f2ece0;
+    --red: #c0392b;
+    --gold: #b8860b;
+    --blue: #1a3a5c;
+    --green: #1e5c3a;
+    --purple: #4a1a5c;
+    --orange: #c0580a;
+    --border: #c8b89a;
+    --highlight: #fff3cd;
+    --highlight2: #d4edda;
+    --highlight3: #d1ecf1;
+    --highlight4: #f8d7da;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 13.5px;
+    line-height: 1.6;
+    padding: 0;
+  }
+
+  .page {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 48px;
+  }
+
+  /* HEADER */
+  .header {
+    border-top: 5px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    padding: 24px 0 20px;
+    margin-bottom: 36px;
+    position: relative;
+  }
+  .header::after {
+    content: '';
+    display: block;
+    border-top: 1px solid var(--ink);
+    margin-top: 6px;
+  }
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4em;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+  .header h1 span {
+    color: var(--red);
+  }
+  .header-meta {
+    text-align: right;
+    font-size: 11px;
+    font-family: 'JetBrains Mono', monospace;
+    color: #666;
+    line-height: 1.8;
+  }
+  .subtitle {
+    font-size: 13px;
+    font-style: italic;
+    color: #555;
+    margin-top: 6px;
+    letter-spacing: 0.02em;
+  }
+
+  /* SECTION HEADERS */
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3em;
+    font-weight: 700;
+    color: var(--paper);
+    background: var(--ink);
+    padding: 6px 14px;
+    margin: 32px 0 16px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 11.5px;
+  }
+  h2.red { background: var(--red); }
+  h2.blue { background: var(--blue); }
+  h2.green { background: var(--green); }
+  h2.purple { background: var(--purple); }
+  h2.orange { background: var(--orange); }
+  h2.gold { background: var(--gold); }
+
+  h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1em;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 18px 0 8px;
+    border-bottom: 1.5px solid var(--border);
+    padding-bottom: 3px;
+  }
+
+  h4 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px;
+    font-weight: 600;
+    color: var(--red);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 12px 0 6px;
+  }
+
+  /* GRID LAYOUTS */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+  .grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 12px; }
+
+  /* BOXES */
+  .box {
+    border: 1.5px solid var(--border);
+    padding: 14px 16px;
+    background: white;
+  }
+  .box-yellow { background: var(--highlight); border-color: #e6c040; }
+  .box-green { background: var(--highlight2); border-color: #5cb85c; }
+  .box-blue { background: var(--highlight3); border-color: #5bc0de; }
+  .box-red { background: var(--highlight4); border-color: #d9534f; }
+  .box-cream { background: var(--cream); border-color: var(--border); }
+
+  .box h3 { margin-top: 0; border-color: var(--border); }
+
+  /* TECHNIQUE CARDS */
+  .technique-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .technique-card {
+    border: 1.5px solid var(--border);
+    padding: 10px 12px;
+    background: white;
+  }
+  .technique-card .name {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    font-size: 11px;
+    color: var(--red);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .technique-card .definition {
+    font-size: 12px;
+    color: #333;
+    line-height: 1.4;
+    margin-bottom: 5px;
+  }
+  .technique-card .example {
+    font-size: 11px;
+    font-style: italic;
+    color: #666;
+    border-left: 2px solid var(--gold);
+    padding-left: 6px;
+    line-height: 1.35;
+  }
+
+  /* TEMPLATE BOXES */
+  .template {
+    background: var(--cream);
+    border: 2px solid var(--ink);
+    padding: 14px 18px;
+    font-family: 'Source Serif 4', serif;
+    line-height: 1.7;
+    margin: 10px 0;
+  }
+  .template .fill {
+    background: white;
+    border-bottom: 1.5px solid var(--ink);
+    padding: 0 4px;
+    font-style: italic;
+    color: var(--blue);
+    display: inline;
+  }
+  .template .fixed {
+    font-weight: 400;
+  }
+
+  /* SENTENCE STARTERS */
+  .starters-list {
+    list-style: none;
+    padding: 0;
+  }
+  .starters-list li {
+    border-left: 3px solid var(--gold);
+    padding: 5px 10px;
+    margin: 5px 0;
+    font-size: 12.5px;
+    background: white;
+    font-style: italic;
+    color: #333;
+  }
+  .starters-list li strong {
+    font-style: normal;
+    color: var(--ink);
+  }
+
+  /* MARK ALLOCATION TABLE */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12.5px;
+    margin: 10px 0;
+  }
+  th {
+    background: var(--ink);
+    color: white;
+    padding: 7px 12px;
+    text-align: left;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  td {
+    padding: 7px 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  tr:nth-child(even) td { background: var(--cream); }
+  tr:nth-child(odd) td { background: white; }
+
+  /* STEP BOXES */
+  .steps {
+    counter-reset: step;
+    list-style: none;
+    padding: 0;
+  }
+  .steps li {
+    counter-increment: step;
+    display: flex;
+    gap: 12px;
+    margin: 8px 0;
+    align-items: flex-start;
+  }
+  .steps li::before {
+    content: counter(step);
+    background: var(--ink);
+    color: white;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    font-size: 11px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .steps.red li::before { background: var(--red); }
+  .steps.blue li::before { background: var(--blue); }
+  .steps.green li::before { background: var(--green); }
+  .steps.purple li::before { background: var(--purple); }
+
+  /* MODEL ANSWER BLOCKS */
+  .model-answer {
+    border: 2px solid var(--ink);
+    margin: 12px 0;
+  }
+  .model-answer .ma-header {
+    background: var(--ink);
+    color: white;
+    padding: 5px 14px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+  }
+  .model-answer .ma-body {
+    padding: 14px 16px;
+    background: white;
+    font-size: 12.5px;
+    line-height: 1.65;
+  }
+  .model-answer .ma-body .t1 { background: #fff3cd; padding: 1px 3px; }
+  .model-answer .ma-body .t2 { background: #d1ecf1; padding: 1px 3px; }
+  .model-answer .ma-body .comp { background: #d4edda; padding: 1px 3px; }
+  .model-answer .ma-body .tech { 
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--red);
+    background: #f8d7da;
+    padding: 1px 4px;
+  }
+  .model-answer .ma-body .q {
+    border-left: 2px solid var(--gold);
+    padding-left: 5px;
+    font-style: italic;
+  }
+
+  /* ANNOTATION KEY */
+  .key {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin: 8px 0;
+    font-size: 11px;
+  }
+  .key-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .key-swatch {
+    width: 14px;
+    height: 14px;
+    border: 1px solid #ccc;
+  }
+
+  /* DIVIDER */
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 20px 0;
+  }
+  .divider-heavy {
+    border: none;
+    border-top: 2px solid var(--ink);
+    margin: 28px 0;
+  }
+
+  /* DANGER BOX */
+  .danger {
+    border: 2px solid var(--red);
+    background: var(--highlight4);
+    padding: 12px 16px;
+    margin: 10px 0;
+  }
+  .danger::before {
+    content: '⚠ COMMON MISTAKE: ';
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    font-size: 10px;
+    color: var(--red);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  /* TIP BOX */
+  .tip {
+    border: 2px solid var(--green);
+    background: var(--highlight2);
+    padding: 12px 16px;
+    margin: 10px 0;
+  }
+  .tip::before {
+    content: '✓ EXAMINER TIP: ';
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    font-size: 10px;
+    color: var(--green);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  /* EFFECT PHRASES */
+  .effect-pill {
+    display: inline-block;
+    background: var(--ink);
+    color: white;
+    padding: 3px 9px;
+    font-size: 11px;
+    margin: 3px;
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+  }
+
+  /* PAGE BREAK HINT */
+  .section-block {
+    margin-bottom: 10px;
+  }
+
+  /* PRINT */
+  @media print {
+    body { font-size: 11.5px; }
+    .page { padding: 20px 24px; }
+    h2 { margin-top: 18px; }
+    .model-answer .ma-body { font-size: 11px; }
+  }
+
+  p { margin: 6px 0; font-size: 13px; }
+  ul { padding-left: 18px; }
+  ul li { margin: 4px 0; font-size: 12.5px; }
+  strong { font-weight: 600; }
+
+  .mono { font-family: 'JetBrains Mono', monospace; font-size: 11px; }
+  .small { font-size: 11.5px; }
+  .italic { font-style: italic; }
+
+  .cols-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #888;
+    margin-bottom: 3px;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-top">
+      <div>
+        <h1>SATIRE<br><span>EXAM MASTER GUIDE</span></h1>
+        <p class="subtitle">Year 10 English · Assessment Task 2 · Complete End-to-End Reference</p>
+      </div>
+      <div class="header-meta">
+        Weighting: 30% · 20 Marks · 45 min writing<br>
+        Outcomes: EN5-URA-01 · EN5-URB-01 · EN5-URC-01<br>
+        Texts: Cartoons · Poem · Letter · Novel Extract
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- SECTION 1: WHAT IS SATIRE -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <h2 class="red">§1 — What Satire Is (Memorise This Definition)</h2>
+
+  <div class="box box-yellow">
+    <strong>SATIRE</strong> is a literary/artistic mode that uses <strong>humour, irony, exaggeration, and ridicule</strong> to critique, expose, and mock the flaws, vices, and hypocrisies of individuals, institutions, or society — with the goal of prompting change or awareness.
+  </div>
+
+  <div class="grid-2" style="margin-top:12px;">
+    <div class="box">
+      <h3>The 3 Core Purposes of Satire</h3>
+      <ul>
+        <li><strong>Expose</strong> — reveal what is hidden or denied</li>
+        <li><strong>Mock</strong> — ridicule the powerful/absurd</li>
+        <li><strong>Reform</strong> — urge the audience to think/act differently</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>The Golden Rule of Satire Analysis</h3>
+      <p>Never just say <em>"the author mocks X."</em> Always explain <strong>HOW</strong> the technique works and <strong>WHY</strong> it positions the audience to see X as absurd, hypocritical, or wrong.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- SECTION 2: TECHNIQUES — THE FULL BANK -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <h2 class="blue">§2 — Satirical Techniques: Full Reference Bank</h2>
+  <p class="small italic" style="margin-bottom:10px;">Memorise the name, one-line definition, and exam-ready example for each. These are your building blocks for every answer.</p>
+
+  <h3>Language / Literary Techniques</h3>
+  <div class="technique-grid">
+
+    <div class="technique-card">
+      <span class="name">Irony</span>
+      <p class="definition">A gap between what is said and what is meant, or between appearance and reality — used to highlight absurdity or hypocrisy.</p>
+      <p class="example">Candide's castle is "grand" because it has "a door and windows" — the claim is grand, the reality is trivial.</p>
+    </div>
+
+    <div class="technique-card">
+      <span class="name">Verbal Irony</span>
+      <p class="definition">Saying the opposite of what you mean to draw attention to the truth.</p>
+      <p class="example">Sassoon's officer tells the mother her son died "bravely" when he actually panicked and fled — the lie exposes the glorification myth.</p>
+    </div>
+
+    <div class="technique-card">
+      <span class="name">Situational Irony</span>
+      <p class="definition">When the outcome is the opposite of what is expected or appropriate.</p>
+      <p class="example">The French King's power over money comes not from gold but from "the vanity of his subjects" — a ruler relying on foolishness rather than strength.</p>
+    </div>
+
+    <div class="technique-card">
+      <span class="name">Hyperbole / Exaggeration</span>
+      <p class="definition">Extreme overstatement to make something appear ridiculous or dangerous.</p>
+      <p class="example">Toles' tornado looming over the pig-figures while they deny climate change is happening — the threat is massively exaggerated visually.</p>
+    </div>
+
+    <div class="technique-card">
+      <span class="name">Bathos</span>
+      <p class="definition">A sudden, jarring drop from the grand/serious to the trivial/mundane — deflates pretension.</p>
+      <p class="example">The Baron celebrated as a great lord... because his castle has "a door and windows."</p>
+    </div>
+
+    <div class="technique-card">
+      <span class="name">Understatement</span>
+      <p class="definition">Deliberately downplaying something serious to make the reality hit harder by contrast.</p>
+      <p class="example">"It's all under control... we're having a meeting in November" — said while the landscape is a barren wasteland.</p>
+    </div>
+
+    <div class="technique-card">
+      <span class="name">Sarcasm</span>
+      <p class="definition">Harsh or cutting irony, often with contempt — the tone makes the mockery clear.</p>
+      <p class="example">The "prodigy of human pride" funding the King's army — "prodigy" ironically frames gullibility as an achievement.</p>
+    </div>
+
+    <div class="technique-card">
+      <span class="name">Juxtaposition</span>
+      <p class="definition">Placing two contrasting ideas/images side by side to highlight the gap between them.</p>
+      <p class="example">In "The Hero," "glorious boy" is juxtaposed with "cold-footed, useless swine" — same person, exposing the lie.</p>
+    </div>
+
+    <div class="technique-card">
+      <span class="name">Parody</span>
+      <p class="definition">Imitating a style, genre, or form to mock it by exaggerating its features.</p>
+      <p class="example">The Persian Letters parodies the travel letter genre — the "naive outsider" perspective makes European customs look absurd.</p>
+    </div>
+
+    <div class="technique-card">
+      <span class="name">Stereotype</span>
+      <p class="definition">An exaggerated, reductive representation of a type of person used to mock that group's values or behaviour.</p>
+      <p class="example">Parsons is the stereotypical Party loyalist — obsessively compliant, proud of mediocrity, unthinkingly devoted.</p>
+    </div>
+
+    <div class="technique-card">
+      <span class="name">Oxymoron</span>
+      <p class="definition">Two contradictory words placed together to highlight an internal contradiction or absurdity.</p>
+      <p class="example">"Prodigy of human pride" — a prodigy is remarkable talent, but here it is for being exploited and vain.</p>
+    </div>
+
+    <div class="technique-card">
+      <span class="name">Allusion</span>
+      <p class="definition">A reference to a well-known text, story, or event that adds a layer of meaning.</p>
+      <p class="example">Toles' three pigs allude to The Three Little Pigs — even the "brick house" (strongest denial) will fall.</p>
+    </div>
+
+    <div class="technique-card">
+      <span class="name">Imagery / Metaphor</span>
+      <p class="definition">Figurative language that creates a vivid picture to convey an idea with emotional force.</p>
+      <p class="example">The children in 1984 are like "gambolling tiger cubs... which will soon grow into man-eaters" — cute now, dangerous later.</p>
+    </div>
+
+    <div class="technique-card">
+      <span class="name">Simile</span>
+      <p class="definition">A direct comparison using "like" or "as" to illuminate an idea vividly.</p>
+      <p class="example">"Like the gambolling of tiger cubs which will soon grow up into man-eaters" — innocent appearance, predatory future.</p>
+    </div>
+
+    <div class="technique-card">
+      <span class="name">Persona / Mask</span>
+      <p class="definition">A fictional narrator adopted by the author to create distance and allow critique from an "outsider" view.</p>
+      <p class="example">Montesquieu uses Rica, a Persian outsider, so that French customs appear strange, irrational, and absurd.</p>
+    </div>
+
+  </div>
+
+  <h3 style="margin-top:18px;">Visual Techniques (Cartoons, Images)</h3>
+  <div class="technique-grid">
+
+    <div class="technique-card">
+      <span class="name">Salience</span>
+      <p class="definition">The dominant visual element — what the eye is drawn to first — carries the central message.</p>
+      <p class="example">In Toles, the massive tornado dominates the image, making the figures' denial look absurdly small by comparison.</p>
+    </div>
+
+    <div class="technique-card">
+      <span class="name">Vector</span>
+      <p class="definition">Lines, gestures, or gaze that direct the viewer's eye from one element to another, guiding meaning.</p>
+      <p class="example">The bottom-left to top-right reading path in Toles guides us through escalating excuses toward the tornado.</p>
+    </div>
+
+    <div class="technique-card">
+      <span class="name">Scale / Size</span>
+      <p class="definition">Making something larger or smaller than reality to convey relative importance or threat.</p>
+      <p class="example">In The River Bed, the landscape dwarfs the human figures — the scale of the crisis far outweighs human response.</p>
+    </div>
+
+    <div class="technique-card">
+      <span class="name">Symbolism (Visual)</span>
+      <p class="definition">An image that represents a larger abstract idea.</p>
+      <p class="example">The dried, cracked riverbed symbolises irreversible environmental collapse — no water = no life.</p>
+    </div>
+
+    <div class="technique-card">
+      <span class="name">Juxtaposition (Visual)</span>
+      <p class="definition">Placing contrasting images side by side to highlight contradiction.</p>
+      <p class="example">Barren wasteland + suited bureaucrats calmly "having a meeting" — the visual gap creates the satire.</p>
+    </div>
+
+    <div class="technique-card">
+      <span class="name">Caricature</span>
+      <p class="definition">Exaggerating physical features to mock or ridicule a character or type.</p>
+      <p class="example">The pig-like figures in Toles caricature politicians/public as greedy, stubborn animals burying their heads.</p>
+    </div>
+
+    <div class="technique-card">
+      <span class="name">Caption / Labels</span>
+      <p class="definition">Written text within a cartoon that adds ironic or satirical commentary.</p>
+      <p class="example">The escalating captions: "Climate change isn't real" → "It won't come soon" → "It won't be that bad" track the stages of denial.</p>
+    </div>
+
+    <div class="technique-card">
+      <span class="name">Speech Bubble / Dialogue</span>
+      <p class="definition">Direct speech assigned to figures that reveals satirical irony through what is said vs. the visual context.</p>
+      <p class="example">"It's all under control... we're having a meeting in November" spoken against a ravaged landscape.</p>
+    </div>
+
+    <div class="technique-card">
+      <span class="name">Colour / Tone</span>
+      <p class="definition">Use of colour or black-and-white to create mood, emphasis, or contrast.</p>
+      <p class="example">The barren brown tones of The River Bed create a bleak, hopeless atmosphere that amplifies the satire of inaction.</p>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- SECTION 3: MARK ALLOCATION & QUESTION TYPES -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <h2 class="green">§3 — Question Types & What Each Mark Level Expects</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Marks</th>
+        <th>Question Type</th>
+        <th>What You Need</th>
+        <th>Approx. Length</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>4 marks</strong></td>
+        <td>Comparative — 2 texts (e.g. both cartoons)</td>
+        <td>1 technique + evidence from Text 1 · 1 technique + evidence from Text 2 · 1 comparative link · effect stated for each</td>
+        <td>~120–150 words</td>
+      </tr>
+      <tr>
+        <td><strong>5 marks</strong></td>
+        <td>Single text — deeper analysis (poem / novel extract)</td>
+        <td>2 techniques with quotes + explanations · Show HOW technique creates satirical effect · Concluding point about purpose</td>
+        <td>~160–200 words</td>
+      </tr>
+      <tr>
+        <td><strong>6 marks</strong></td>
+        <td>Single text OR comparative — extended argument</td>
+        <td>3 techniques OR 2 texts with 2 techniques each · Quotes for all · Explain effect of each · Comparative or evaluative conclusion · Context may be useful</td>
+        <td>~200–250 words</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="tip">
+    For every mark, you roughly need one clearly explained point. A 5-marker = 5 clear analytical moves. Don't waffle — make each sentence do analytical work.
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- SECTION 4: THE UNIVERSAL ANSWER FORMULA -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <h2 class="purple">§4 — The Universal Answer Formula (CTEQ+)</h2>
+
+  <p>Every paragraph you write must do these things in order:</p>
+
+  <ol class="steps purple">
+    <li><strong>CONCEPT</strong> — Name the satirical target (what is being mocked: class, denial, war glory, political power, blind obedience)</li>
+    <li><strong>TECHNIQUE</strong> — Name the technique the composer uses</li>
+    <li><strong>EVIDENCE</strong> — Give the quote or visual detail (be specific and accurate)</li>
+    <li><strong>EXPLAIN</strong> — Explain how the technique creates satirical meaning. What does it reveal? What does it make the audience think/feel?</li>
+    <li><strong>EFFECT/PURPOSE</strong> — Zoom out: what is the composer ultimately critiquing? Position audience to laugh at? Question? Realise?</li>
+  </ol>
+
+  <div class="grid-2" style="margin-top:14px;">
+    <div>
+      <h4>Single Text Paragraph Template</h4>
+      <div class="template">
+        <span class="fixed">In </span><span class="fill">[Text Title]</span><span class="fixed">, </span><span class="fill">[composer]</span><span class="fixed"> uses </span><span class="fill">[technique]</span><span class="fixed"> to satirise </span><span class="fill">[target/value]</span><span class="fixed">. The </span><span class="fill">[quote/visual detail]</span><span class="fixed"> </span><span class="fill">[explains what it does]</span><span class="fixed">, exposing </span><span class="fill">[the flaw/hypocrisy]</span><span class="fixed">. This positions the audience to </span><span class="fill">[realise / question / feel superior to]</span><span class="fixed"> </span><span class="fill">[what]</span><span class="fixed">, critiquing </span><span class="fill">[broader societal issue]</span><span class="fixed">.</span>
+      </div>
+    </div>
+    <div>
+      <h4>Comparative Paragraph Template</h4>
+      <div class="template">
+        <span class="fixed">Both </span><span class="fill">[Text 1]</span><span class="fixed"> and </span><span class="fill">[Text 2]</span><span class="fixed"> use satire to critique </span><span class="fill">[shared target]</span><span class="fixed">. In </span><span class="fill">[Text 1]</span><span class="fixed">, </span><span class="fill">[technique]</span><span class="fixed"> is used: </span><span class="fill">[quote/detail + explain]</span><span class="fixed">. </span><span class="fill">[Similarly / In contrast]</span><span class="fixed">, </span><span class="fill">[Text 2]</span><span class="fixed"> employs </span><span class="fill">[technique]</span><span class="fixed">: </span><span class="fill">[detail + explain]</span><span class="fixed">. Together, both texts </span><span class="fill">[shared satirical purpose]</span><span class="fixed">, however </span><span class="fill">[key difference]</span><span class="fixed">.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- SECTION 5: SENTENCE STARTERS & LINKING PHRASES -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <h2 class="orange">§5 — Sentence Starters, Linkers & Effect Phrases to Memorise</h2>
+
+  <div class="grid-3">
+    <div>
+      <h4>Opening / Topic Sentences</h4>
+      <ul class="starters-list">
+        <li><strong>[Text]</strong> satirises [target] through the use of [technique]...</li>
+        <li>Both [Text 1] and [Text 2] use satire to expose...</li>
+        <li>[Composer] employs [technique] to critique...</li>
+        <li>Through [technique], [composer] ridicules...</li>
+        <li>The satirical effect of [text] is achieved through...</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Introducing Evidence</h4>
+      <ul class="starters-list">
+        <li>This is evident in the <strong>image/quote</strong>: "..."</li>
+        <li>The <strong>[technique]</strong> is seen when...</li>
+        <li>Visually, <strong>[describe detail]</strong> represents...</li>
+        <li>The caption/dialogue <strong>"..."</strong> ironically suggests...</li>
+        <li>The description of [X] as "[quote]" reveals...</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Explanation Starters</h4>
+      <ul class="starters-list">
+        <li>This <strong>exposes</strong> the gap between...</li>
+        <li>The effect of this is to <strong>position</strong> the audience to...</li>
+        <li>This <strong>ridicules</strong> the belief that...</li>
+        <li>By doing so, [composer] <strong>highlights</strong>...</li>
+        <li>This <strong>invites</strong> the reader/viewer to question...</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Comparative Links</h4>
+      <ul class="starters-list">
+        <li><strong>Similarly</strong>, [Text 2] achieves this through...</li>
+        <li><strong>In contrast</strong>, while [Text 1] uses..., [Text 2]...</li>
+        <li><strong>Both texts therefore</strong> critique...</li>
+        <li><strong>However</strong>, where [Text 1] focuses on... [Text 2]...</li>
+        <li><strong>Unlike</strong> [Text 1], [Text 2]...</li>
+        <li><strong>Together</strong>, both composers suggest...</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Concluding Sentences</h4>
+      <ul class="starters-list">
+        <li>Ultimately, [composer] uses satire to <strong>expose</strong>...</li>
+        <li>Through these techniques, the audience is <strong>positioned to</strong>...</li>
+        <li>This satirises the broader <strong>societal failure</strong> to...</li>
+        <li>The satire works by making the audience <strong>laugh at</strong>, not with...</li>
+        <li>Both composers ultimately argue that [societal value] is...</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Effect Phrases (Plug In)</h4>
+      <div style="margin-top:4px;">
+        <span class="effect-pill">exposing the gap between [X] and [Y]</span>
+        <span class="effect-pill">positioning the audience to feel superior to</span>
+        <span class="effect-pill">inviting the reader to question</span>
+        <span class="effect-pill">making the audience laugh at rather than with</span>
+        <span class="effect-pill">highlighting the hypocrisy of</span>
+        <span class="effect-pill">revealing the absurdity of</span>
+        <span class="effect-pill">critiquing the blind acceptance of</span>
+        <span class="effect-pill">exposing the futility of</span>
+        <span class="effect-pill">suggesting that [X] is ultimately hollow/dangerous/absurd</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- SECTION 6: YOUR ACTUAL EXAM TEXTS — Pre-Loaded Analysis -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <h2 class="red">§6 — Your Actual Exam Texts: Pre-Loaded Key Quotes & Analysis</h2>
+  <p class="small italic" style="margin-bottom:12px;">These are the four texts from your practice exam — the real exam will have similar types. Memorise the approach for each text type.</p>
+
+  <!-- TEXT 1: CARTOONS -->
+  <div class="section-block">
+    <h3>Text 1 — Cartoons: 'Climate Change' (Toles, 2005) & 'The River Bed' (Tandberg)</h3>
+    <div class="grid-2">
+      <div class="box box-cream">
+        <h4>Toles — 'Climate Change'</h4>
+        <p><strong>Satirical Target:</strong> Public and political denial of climate change</p>
+        <p style="margin-top:6px;"><strong>Key Visual Details:</strong></p>
+        <ul>
+          <li>Three pig-like figures digging holes as tornado rages overhead</li>
+          <li>Escalating caption signs: "Climate change isn't real" → "It won't come soon" → "It won't be that bad"</li>
+          <li>Caption at bottom: "Let's dig a hole! And keep digging!"</li>
+          <li>Tornado = inevitable consequence; pigs = society's denial</li>
+        </ul>
+        <p style="margin-top:6px;"><strong>Key Techniques:</strong> Irony (denying visible disaster), allusion (Three Little Pigs — even the strongest denial falls), caricature (pig-figures = greedy/stubborn deniers), vector (bottom-left → top-right escalation), visual symbolism (digging deeper = making it worse)</p>
+      </div>
+      <div class="box box-cream">
+        <h4>Tandberg — 'The River Bed'</h4>
+        <p><strong>Satirical Target:</strong> Bureaucratic / political inaction and complacency</p>
+        <p style="margin-top:6px;"><strong>Key Visual Details:</strong></p>
+        <ul>
+          <li>Vast cracked, barren, dried-out landscape — barely a puddle left</li>
+          <li>Dead/dying trees throughout</li>
+          <li>Tiny suited figures with speech bubble: "It's all under control... we're having a meeting in November"</li>
+          <li>Scale: landscape dominates, people are tiny</li>
+        </ul>
+        <p style="margin-top:6px;"><strong>Key Techniques:</strong> Understatement / sarcasm ("all under control"), juxtaposition (catastrophic landscape vs. bureaucratic calm), scale (dwarfed figures = human irrelevance/powerlessness), visual symbolism (dried river = death of environment), irony ("meeting in November" = far too late)</p>
+      </div>
+    </div>
+    <div class="tip" style="margin-top:8px;">The KEY COMPARISON: Both mock delayed responses, but Toles focuses on <em>public denial</em> while Tandberg targets <em>political complacency</em>. Together they suggest failure exists at every level of society.</div>
+  </div>
+
+  <!-- TEXT 2: POEM -->
+  <div class="section-block">
+    <h3>Text 2 — Poem: 'The Hero' by Siegfried Sassoon</h3>
+    <div class="grid-2">
+      <div class="box box-cream">
+        <h4>Key Quotes</h4>
+        <ul>
+          <li>"Because he'd been so brave, her glorious boy" — mother's belief</li>
+          <li>"'Jack', cold-footed, useless swine" — the officer's private truth</li>
+          <li>"How he'd tried to get sent home, and how, at last, he died, blown to small bits"</li>
+          <li>"Her weak eyes had shone with gentle triumph, brimmed with joy"</li>
+          <li>"He'd told the poor old dear some gallant lies that she would nourish all her days"</li>
+          <li>"Like the gambolling of tiger cubs which will soon grow up into man-eaters" (from 1984, similar technique)</li>
+          <li>"And no one seemed to care / Except that lonely woman with white hair"</li>
+        </ul>
+      </div>
+      <div class="box box-cream">
+        <h4>Techniques & Their Satirical Function</h4>
+        <ul>
+          <li><strong>Juxtaposition:</strong> "glorious boy" vs "cold-footed, useless swine" — same person, exposes the fabricated heroism myth</li>
+          <li><strong>Verbal irony:</strong> "gallant lies" — the lies are what sustain the mother's happiness; the "gallantry" is a fiction</li>
+          <li><strong>Tone shift:</strong> From reverent (stanza 1) to brutal (stanza 2) — the shift IS the satirical move; it performs the reveal</li>
+          <li><strong>Imagery:</strong> "blown to small bits" — deliberately unglamorous, anti-heroic language strips away war's glory</li>
+          <li><strong>Pathos:</strong> "lonely woman with white hair" — only she mourned, exposing war's indifference to individuals</li>
+        </ul>
+        <p style="margin-top:6px;"><strong>Satirical Target:</strong> The government/military glorification of war and the lies told to keep civilians supportive</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TEXT 3: LETTER -->
+  <div class="section-block">
+    <h3>Text 3 — Letter: 'The Persian Letters' by Montesquieu (1721)</h3>
+    <div class="grid-2">
+      <div class="box box-cream">
+        <h4>Key Quotes</h4>
+        <ul>
+          <li>"He has no mines of gold... but he is much wealthier... because his riches are drawn from a more inexhaustible source, the vanity of his subjects"</li>
+          <li>"The king is a great magician, for his dominion extends to the minds of his subjects"</li>
+          <li>"He simply suggests to his subjects that a piece of paper is coin of the realm, and they are straightway convinced of it"</li>
+          <li>"He has even succeeded in persuading them that his touch is a sovereign cure for all sorts of diseases"</li>
+          <li>"It is by a prodigy of human pride that his troops are paid"</li>
+        </ul>
+      </div>
+      <div class="box box-cream">
+        <h4>Techniques & Their Satirical Function</h4>
+        <ul>
+          <li><strong>Persona/outsider perspective:</strong> Rica is Persian — French customs appear irrational and absurd to "fresh eyes"</li>
+          <li><strong>Irony:</strong> Describing the king as a "great magician" — sounds like praise, actually means he tricks his people</li>
+          <li><strong>Situational irony:</strong> A king's power relies not on his strength but on the "vanity" of those he rules</li>
+          <li><strong>Oxymoron:</strong> "Prodigy of human pride" — remarkable talent, but for being exploited/fooled</li>
+          <li><strong>Hyperbole:</strong> The king cures diseases with his touch — taken to absurd extremes to expose blind deference</li>
+          <li><strong>Satire of absolute monarchy:</strong> Power is shown as illusion; subjects fund their own oppression</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- TEXT 4: NOVEL -->
+  <div class="section-block">
+    <h3>Text 4 — Novel: '1984' by George Orwell (Parsons & His Children)</h3>
+    <div class="grid-2">
+      <div class="box box-cream">
+        <h4>Key Quotes</h4>
+        <ul>
+          <li>"A fattish but active man of paralysing stupidity, a mass of imbecile enthusiasms"</li>
+          <li>"One of those completely unquestioning, devoted drudges on whom... the stability of the Party depended"</li>
+          <li>"You're a traitor! You're a thought-criminal! You're a Eurasian spy! I'll shoot you, I'll vaporize you!"</li>
+          <li>"It was not altogether a game" — the children's violence is real</li>
+          <li>"Like the gambolling of tiger cubs which will soon grow up into man-eaters"</li>
+          <li>"Wearing the uniform of the Spies" — indoctrinated from childhood</li>
+          <li>"He had put in an appearance at the Community Centre every evening for the past four years" (with quiet pride)</li>
+        </ul>
+      </div>
+      <div class="box box-cream">
+        <h4>Techniques & Their Satirical Function</h4>
+        <ul>
+          <li><strong>Caricature/Characterisation:</strong> Parsons is reduced to a smiling, sweating, mindless machine — satirises the ideal Party citizen as an idiot</li>
+          <li><strong>Dramatic irony:</strong> Parsons is proud of what the reader sees as pathetic — "quiet pride" is satirically devastating</li>
+          <li><strong>Simile:</strong> "Tiger cubs" — innocent now, killers later; children as products of systemic violence</li>
+          <li><strong>Juxtaposition:</strong> "Not altogether a game" — the horror is that play and political violence have merged</li>
+          <li><strong>The children as mirror:</strong> They reflect and amplify Parsons' blind obedience — if even children are this indoctrinated, the system is total</li>
+          <li><strong>Satirical Target:</strong> Totalitarian indoctrination, blind loyalty, and the destruction of critical thinking</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- SECTION 7: MODEL ANSWERS — FULL ANNOTATED -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <h2 class="gold">§7 — Full Model Answers (Annotated) for Every Question Type</h2>
+
+  <div class="key">
+    <div class="key-item"><div class="key-swatch" style="background:#fff3cd;"></div> Topic sentence / comparative opening</div>
+    <div class="key-item"><div class="key-swatch" style="background:#f8d7da;"></div> Technique named</div>
+    <div class="key-item"><div class="key-swatch" style="background:#d1ecf1;"></div> Evidence / quote</div>
+    <div class="key-item"><div class="key-swatch" style="background:#d4edda;"></div> Explanation of effect / comparative link</div>
+  </div>
+
+  <!-- Q1: COMPARATIVE CARTOONS -->
+  <div class="model-answer">
+    <div class="ma-header">
+      <span>Q1 — Comparative Cartoons (4 marks) · Target: ~130 words</span>
+      <span>FULL MARKS MODEL</span>
+    </div>
+    <div class="ma-body">
+      <span class="t1">Both Toles' <em>Climate Change</em> and Tandberg's <em>The River Bed</em> use satire to expose society's dangerously complacent and delayed response to environmental destruction.</span><br><br>
+      In <em>Climate Change</em>, Toles employs <span class="tech">visual irony and allusion</span> to mock the progressive stages of denial. <span class="q">The escalating captions — "Climate change isn't real," "It won't come soon," "It won't be that bad"</span> — track society's self-deception while a tornado rages overhead. The pig-figures allude to the Three Little Pigs, suggesting even the "strongest" denial will ultimately be destroyed, <span class="t2">positioning the audience to see denial as not just foolish but actively self-destructive.</span><br><br>
+      <span class="comp">Similarly</span>, Tandberg uses <span class="tech">understatement and scale</span> to satirise political inaction. The speech bubble <span class="q">"It's all under control... we're having a meeting in November"</span> is delivered against a devastated, barren landscape, the figures dwarfed by the scale of environmental collapse. <span class="t2">The juxtaposition between bureaucratic calm and visual catastrophe exposes institutional response as absurdly inadequate.</span><br><br>
+      <span class="comp">Both cartoons therefore critique the gap between the severity of environmental crisis and human response — Toles targeting public denial, Tandberg targeting political complacency — together suggesting this failure exists at every level of society.</span>
+    </div>
+  </div>
+
+  <!-- Q2: POEM -->
+  <div class="model-answer">
+    <div class="ma-header">
+      <span>Q2 — Poem: 'The Hero' (5 marks) · Target: ~180 words</span>
+      <span>FULL MARKS MODEL</span>
+    </div>
+    <div class="ma-body">
+      <span class="t1">In 'The Hero', Siegfried Sassoon satirises the glorification of war by exposing the gap between the heroic narrative society constructs and the brutal, undignified reality of a soldier's death.</span><br><br>
+      Sassoon uses <span class="tech">juxtaposition</span> as his central satirical tool. The officer privately recalls <span class="q">"Jack, cold-footed, useless swine"</span> who <span class="q">"tried to get sent home"</span>, yet outwardly tells his mother he was brave, allowing her <span class="q">"weak eyes"</span> to shine with <span class="q">"gentle triumph."</span> <span class="t2">The violent collision between these two descriptions of the same person exposes glorification as a conscious lie told to keep civilians supportive of war — the "hero" narrative is fabricated, not earned.</span><br><br>
+      Sassoon further employs <span class="tech">brutal, anti-heroic imagery</span> — Jack died <span class="q">"blown to small bits"</span> and <span class="q">"no one seemed to care."</span> <span class="t2">This deliberately unglamorous language strips away the romanticised vision of a noble death in battle, exposing war's indifference to individual soldiers.</span><br><br>
+      The <span class="tech">tone shift</span> from reverent (stanza 1) to contemptuous (stanza 2) is itself the satirical act — the reader experiences the lie and then the truth in the same poem, <span class="comp">positioning them to realise the extent to which society is manipulated into accepting and glorifying war's cost.</span>
+    </div>
+  </div>
+
+  <!-- Q3: LETTER -->
+  <div class="model-answer">
+    <div class="ma-header">
+      <span>Q3 — Letter: 'The Persian Letters' (6 marks) · Target: ~220 words</span>
+      <span>FULL MARKS MODEL</span>
+    </div>
+    <div class="ma-body">
+      <span class="t1">In 'The Persian Letters', Montesquieu portrays the French King as a manipulative illusionist to satirise the irrationality of absolute monarchy and the dangerous gullibility of those who sustain it.</span><br><br>
+      Montesquieu employs the <span class="tech">outsider persona</span> of Rica, a Persian traveller, to make French customs appear bizarre and irrational. By positioning an "outside" observer as narrator, what French citizens accept as normal is defamiliarised — rendered absurd through fresh eyes. This technique is itself satirical: the reader is invited to see their own society's deference to power as equally ridiculous.<br><br>
+      The king is described through <span class="tech">irony</span> as <span class="q">"a great magician, for his dominion extends to the minds of his subjects."</span> <span class="t2">The word "magician" sounds like admiration but is actually an accusation — the king's power is illusion and manipulation, not legitimate authority.</span> This is reinforced by <span class="tech">situational irony</span>: a supposedly all-powerful monarch's wealth comes not from gold or strength but from <span class="q">"the vanity of his subjects."</span> The ruler depends entirely on the foolishness of those he rules.<br><br>
+      The <span class="tech">oxymoron</span> <span class="q">"prodigy of human pride"</span> further mocks this dynamic — "prodigy" suggests remarkable achievement, but here it describes the subjects' remarkable capacity to be exploited. <span class="comp">Ultimately, Montesquieu satirises not just the king but the subjects who fund their own oppression, suggesting that absolute power only exists because people allow themselves to be deceived — a critique as relevant today as in 1721.</span>
+    </div>
+  </div>
+
+  <!-- Q4: NOVEL -->
+  <div class="model-answer">
+    <div class="ma-header">
+      <span>Q4 — Novel: Parsons' Children in '1984' (5 marks) · Target: ~180 words</span>
+      <span>FULL MARKS MODEL</span>
+    </div>
+    <div class="ma-body">
+      <span class="t1">In the extract from <em>Nineteen Eighty-Four</em>, Orwell uses Parsons' children to amplify the satirical portrayal of Parsons as the ideal product of totalitarian indoctrination — and to expose the terrifying completeness of the Party's control.</span><br><br>
+      The children are described through <span class="tech">visual imagery</span> as wearing <span class="q">"the uniform of the Spies"</span> and <span class="q">"menacing [Winston] with a toy automatic pistol."</span> <span class="t2">The visual detail of a toy weapon used with genuine menace satirises the Party's ability to transform even childhood play into political violence — the innocent and the dangerous have been fused.</span><br><br>
+      Orwell uses the <span class="tech">simile</span> of <span class="q">"gambolling tiger cubs which will soon grow up into man-eaters"</span> to devastating satirical effect. <span class="t2">The children appear innocent but are already dangerous — this exposes how Parsons' blind compliance as a father has allowed the Party to weaponise his own children against him.</span><br><br>
+      By drawing <span class="tech">parallels</span> between the children's fanatical loyalty and Parsons' "imbecile enthusiasms," Orwell satirises the cycle of indoctrination. <span class="comp">Parsons is not just complicit — he is the blueprint his children have copied. Both generations expose the Party's most chilling success: replacing human judgment with programmed obedience.</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- SECTION 8: IN-EXAM PROCESS -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <h2 class="blue">§8 — The 10-Minute Reading Time Process (Do This Every Exam)</h2>
+
+  <div class="grid-2">
+    <div>
+      <ol class="steps blue">
+        <li><strong>Read ALL questions first</strong> — know what you're looking for before you read texts</li>
+        <li><strong>Read each text with the question in mind</strong> — actively look for the target of satire, not just techniques</li>
+        <li><strong>For each text, identify:</strong> What is being mocked? What technique does this? What specific quote/detail proves it?</li>
+        <li><strong>Plan your comparison</strong> (if comparative): similarity in purpose, difference in technique/focus</li>
+        <li><strong>Choose your strongest evidence</strong> — short, specific, quotable. One great quote beats three vague ones.</li>
+      </ol>
+    </div>
+    <div>
+      <h4>Time Management in Writing Time</h4>
+      <table>
+        <thead><tr><th>Question</th><th>Marks</th><th>Time</th></tr></thead>
+        <tbody>
+          <tr><td>Q1 — Cartoons</td><td>4</td><td>~8 min</td></tr>
+          <tr><td>Q2 — Poem</td><td>5</td><td>~10 min</td></tr>
+          <tr><td>Q3 — Letter</td><td>6</td><td>~13 min</td></tr>
+          <tr><td>Q4 — Novel</td><td>5</td><td>~10 min</td></tr>
+          <tr><td>Buffer / Check</td><td>—</td><td>~4 min</td></tr>
+        </tbody>
+      </table>
+      <p class="small" style="margin-top:6px; font-style:italic;">Roughly 2.5 minutes per mark. Don't overwrite on 4-mark questions.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- SECTION 9: COMMON MISTAKES -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <h2 class="red">§9 — The 8 Most Common Mistakes (And How to Fix Them)</h2>
+
+  <div class="grid-2">
+    <div>
+      <div class="danger">
+        Describing what happens in the text instead of analysing it. "The cartoon shows pigs digging holes" tells us nothing. Always add: <em>what does this mean, and why is it satirical?</em>
+      </div>
+      <div class="danger">
+        Naming a technique without explaining it. "Irony is used" gets zero marks alone. Always follow with: the quote + how the irony works + what it reveals.
+      </div>
+      <div class="danger">
+        In comparative questions: writing two separate analyses with no linking sentence. You MUST connect the texts — use "similarly," "in contrast," "together both texts suggest..."
+      </div>
+      <div class="danger">
+        Inventing or misquoting. If you can't remember the exact words, paraphrase confidently: "Parsons is described as someone of 'paralysing stupidity'" rather than guessing a wrong quote.
+      </div>
+    </div>
+    <div>
+      <div class="danger">
+        Using the same technique word for every text. Show range — use irony AND juxtaposition AND imagery, not irony three times.
+      </div>
+      <div class="danger">
+        Writing a plot summary for the poem/novel. The question asks HOW the text satirises, not WHAT HAPPENS. Every sentence must be analytical.
+      </div>
+      <div class="danger">
+        Ending without a purpose/effect statement. Don't just analyse the technique — zoom out and say what the composer is ultimately critiquing about society.
+      </div>
+      <div class="danger">
+        Writing "the author wants the audience to think that..." — avoid this vague phrasing. Instead: "this positions the audience to recognise the hypocrisy of..." — show the effect, don't just assert it.
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- SECTION 10: CANDIDE + IT CROWD (YOUR SET TEXTS) -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <h2 class="green">§10 — Your Set Texts: Candide Ch.1 & The IT Crowd Ep.1 (For 6-Marker Comparatives)</h2>
+
+  <div class="grid-2">
+    <div class="box box-cream">
+      <h4>Candide, Chapter 1 — Voltaire</h4>
+      <p><strong>Satirical Targets:</strong> Aristocratic class system, inherited privilege, Leibnizian optimism ("best of all possible worlds")</p>
+      <p style="margin-top:6px;"><strong>Key Quotes to Know:</strong></p>
+      <ul>
+        <li>"One of the most powerful lords in Westphalia" — whose castle has "a door and windows" (bathos)</li>
+        <li>The Baron's nobility traced through 71 quarterings of lineage (absurd precision mocking pedigree obsession)</li>
+        <li>Pangloss teaches "metaphysico-theologico-cosmolo-nigology" — absurd invented discipline mocking blind optimism</li>
+        <li>"All is for the best in the best of all possible worlds" — the motto that satire dismantles throughout</li>
+        <li>Cunégonde is described as "fresh, plump and attractive" — reduced to physical commodity</li>
+      </ul>
+      <p style="margin-top:6px;"><strong>Techniques:</strong> Bathos, irony, hyperbole, parody (of philosophical optimism), satirical characterisation</p>
+    </div>
+    <div class="box box-cream">
+      <h4>The IT Crowd, Episode 1 — Graham Linehan</h4>
+      <p><strong>Satirical Targets:</strong> Corporate workplace hierarchy, social snobbery toward technical workers, performative professional identity</p>
+      <p style="margin-top:6px;"><strong>Key Moments/Details to Know:</strong></p>
+      <ul>
+        <li>IT department physically in the basement — spatial metaphor for social devaluation</li>
+        <li>Denholm's dismissal of the IT team as socially inferior</li>
+        <li>Jen's lie: "I have a lot of experience with computers" — satirises the performative nature of corporate status</li>
+        <li>Moss and Roy's chaotic, anti-social workspace — caricature of tech workers as socially incompetent</li>
+        <li>Jen's desperate desire for an "upstairs" office position — mocks class-based professional snobbery</li>
+      </ul>
+      <p style="margin-top:6px;"><strong>Techniques:</strong> Situational comedy, visual symbolism (basement), stereotype/caricature, irony, parody (of corporate culture)</p>
+    </div>
+  </div>
+
+  <div class="box box-yellow" style="margin-top:12px;">
+    <h4>Comparative Framework: Candide vs. IT Crowd</h4>
+    <table>
+      <thead><tr><th>Aspect</th><th>Candide (Voltaire)</th><th>The IT Crowd (Linehan)</th></tr></thead>
+      <tbody>
+        <tr><td>Satirical Target</td><td>Hereditary aristocratic class</td><td>Modern corporate hierarchy</td></tr>
+        <tr><td>Main Technique</td><td>Irony, bathos, parody</td><td>Visual comedy, stereotype, situational irony</td></tr>
+        <tr><td>How status is exposed</td><td>Grand title + trivial reality (door and windows)</td><td>Prestige role + total incompetence (Jen's lie)</td></tr>
+        <tr><td>Medium</td><td>Written satire — verbal/linguistic</td><td>TV comedy — visual/physical/dialogue</td></tr>
+        <tr><td>Shared message</td><td colspan="2">Social status is superficial, performative, and disconnected from actual worth or ability</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- SECTION 11: QUICK-FIRE DRILL -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <h2 class="purple">§11 — Quick-Fire Drill: Technique → Effect in One Line</h2>
+  <p class="small italic" style="margin-bottom:10px;">Practice saying these out loud until they feel automatic. These are plug-in effect explanations.</p>
+
+  <div class="grid-2">
+    <div>
+      <table>
+        <thead><tr><th>Technique Used</th><th>Effect to Write</th></tr></thead>
+        <tbody>
+          <tr><td>Irony</td><td>"...exposes the gap between appearance and reality, making [X] appear absurd/hypocritical"</td></tr>
+          <tr><td>Bathos</td><td>"...deflates the pretension of [X], revealing the emptiness beneath the grand claim"</td></tr>
+          <tr><td>Hyperbole</td><td>"...exaggerates [X] to the point of absurdity, forcing the audience to recognise how ridiculous it is"</td></tr>
+          <tr><td>Juxtaposition</td><td>"...highlights the contradiction between [X] and [Y], exposing the hypocrisy of..."</td></tr>
+          <tr><td>Understatement</td><td>"...makes the severity of [X] more striking by contrast, suggesting that the response to it is dangerously inadequate"</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <table>
+        <thead><tr><th>Technique Used</th><th>Effect to Write</th></tr></thead>
+        <tbody>
+          <tr><td>Stereotype/Caricature</td><td>"...reduces [X] to their most absurd qualities, inviting the audience to laugh at rather than respect them"</td></tr>
+          <tr><td>Outsider persona</td><td>"...defamiliarises [X], making what society accepts as normal appear irrational and worthy of critique"</td></tr>
+          <tr><td>Visual scale</td><td>"...communicates the magnitude of [X] relative to human response, exposing the inadequacy of..."</td></tr>
+          <tr><td>Simile/Metaphor</td><td>"...draws a vivid parallel between [X] and [Y], revealing [hidden truth] about..."</td></tr>
+          <tr><td>Tone shift</td><td>"...performs the satirical reveal — the contrast between [tone 1] and [tone 2] is itself the critique"</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- SECTION 12: PRACTICE QUESTIONS WITH STRUCTURES -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <h2 class="orange">§12 — Practice Questions (New, Exam-Style) with Answer Skeletons</h2>
+
+  <div class="grid-2">
+    <div class="box">
+      <h4>Practice Q1 (4 marks — Comparative)</h4>
+      <p><em>"How do both Candide (Chapter 1) and The IT Crowd (Episode 1) use satire to expose the emptiness of social status?"</em></p>
+      <p style="margin-top:8px;"><strong>Skeleton:</strong></p>
+      <ul class="small">
+        <li>Topic: Both texts satirise superficial social hierarchy</li>
+        <li>Text 1: Candide — bathos — "door and windows" — deflates aristocratic pretension</li>
+        <li>Text 2: IT Crowd — visual symbolism — basement — spatial metaphor for devaluation</li>
+        <li>Compare: Both expose status as empty, but Voltaire uses verbal irony while Linehan uses physical comedy</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h4>Practice Q2 (5 marks — Single Text)</h4>
+      <p><em>"How does Montesquieu use the persona of Rica to create political satire in The Persian Letters?"</em></p>
+      <p style="margin-top:8px;"><strong>Skeleton:</strong></p>
+      <ul class="small">
+        <li>Concept: Outsider perspective defamiliarises French power</li>
+        <li>Technique 1: Persona — Rica's naivety makes monarchy look absurd</li>
+        <li>Quote 1: "great magician" — irony — power as illusion</li>
+        <li>Technique 2: Situational irony — king relies on subjects' "vanity"</li>
+        <li>Quote 2: "inexhaustible source, the vanity of his subjects"</li>
+        <li>Effect: Subjects fund their own oppression; monarchy is exposed as illegitimate</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h4>Practice Q3 (5 marks — Poem)</h4>
+      <p><em>"How does Sassoon use language to position the reader against the glorification of war in 'The Hero'?"</em></p>
+      <p style="margin-top:8px;"><strong>Skeleton:</strong></p>
+      <ul class="small">
+        <li>Concept: War glorification is exposed as a deliberate lie</li>
+        <li>Technique 1: Juxtaposition — "glorious boy" vs "cold-footed, useless swine"</li>
+        <li>Effect: Exposes the fabricated heroism narrative</li>
+        <li>Technique 2: Anti-heroic imagery — "blown to small bits"</li>
+        <li>Effect: Strips away romantic notions of noble death</li>
+        <li>Concluding effect: Reader positioned to see war glorification as manipulation</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h4>Practice Q4 (6 marks — Extended)</h4>
+      <p><em>"How does Orwell use the characterisation of Parsons and his children to satirise the values of a totalitarian society?"</em></p>
+      <p style="margin-top:8px;"><strong>Skeleton:</strong></p>
+      <ul class="small">
+        <li>Concept: Blind obedience as the Party's ideal citizen is satirised as idiotic and dangerous</li>
+        <li>Technique 1: Caricature — "paralysing stupidity," "mass of imbecile enthusiasms"</li>
+        <li>Technique 2: Simile — "tiger cubs... man-eaters" — children as future weapons</li>
+        <li>Technique 3: Parallels — children mirror Parsons, showing indoctrination is systemic</li>
+        <li>Comparative/concluding: Children expose how Parsons is complicit in his own oppression</li>
+        <li>Broader satire: Totalitarianism replaces human judgment with programmed loyalty</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <hr class="divider-heavy" style="margin-top:36px;">
+  <div style="display:flex; justify-content:space-between; align-items:center; font-family:'JetBrains Mono', monospace; font-size:10px; color:#888;">
+    <span>YEAR 10 ENGLISH · SATIRE UNIT · ASSESSMENT TASK 2</span>
+    <span>Techniques · Templates · Model Answers · Exam Process</span>
+    <span>Girraween High · 2026</span>
+  </div>
+
+</div>
+</body>
+</html>
